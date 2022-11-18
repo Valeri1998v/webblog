@@ -2,4 +2,6 @@
 <p><%= @question.body %></p>
 <p>user_id: <b><%= @question.user_id %></b></p>
 
+<p><%= link_to "Edit question", edit_question_path(@question) %></p>
+
 <p><%= link_to "All the questions", questions_path %></p>
