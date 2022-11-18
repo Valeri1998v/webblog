@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
 
     def update
         @question.update(question_params)
-        redirect_to question_path(@question)
+        redirect_to question_path(@questions)
     end
 
     def destroy
@@ -18,6 +18,7 @@ class QuestionsController < ApplicationController
     end
 
     def show
+        @question = Question.find(params[:id])
     end
 
     def index
